@@ -14,15 +14,15 @@ export default {
     <h1>Professional roles</h1>
   </section>
   <div class="resume-item">
-    <ResumeItem title="Networking Roles" des="hiiiii"></ResumeItem>
-    <ResumeItem title="Programming roles" des="hiiiii"></ResumeItem>
+    <ResumeItem title="Networking Roles" des="The description will be added soon"></ResumeItem>
+    <ResumeItem title="Programming roles" des="The description will be added soon"></ResumeItem>
   </div>
   <section>
     <h1>Casual roles</h1>
   </section>
   <div class="resume-item">
-    <ResumeItem title="Crew Member" des="hiiiii"></ResumeItem>
-    <ResumeItem title="Console operator" des="hiiiii"></ResumeItem>
+    <ResumeItem title="Crew Member" des="The description will be added soon"></ResumeItem>
+    <ResumeItem title="Console operator" des="The description will be added soon"></ResumeItem>
   </div>
 </div>
 </template>

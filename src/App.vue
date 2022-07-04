@@ -15,13 +15,13 @@
 
     <div class="main-content">
       <nav class="side-bar">
-        <router-link to="/" class="route current">Home - its me</router-link>
-        <router-link to="/resume" class="route">Resumes</router-link> 
-        <router-link to="/my-work" class="route">My work</router-link>
-        <router-link to="/experience" class="route">Experience</router-link>
-        <router-link to="/blogs" class="route">Blog</router-link>
-        <router-link to="/plans" class="route">What's next</router-link>
-        <router-link to="/inspirations" class="route">What's the kick</router-link>
+        <router-link to="/"  class="route" :class="{ current: isHome }">Home</router-link>
+        <router-link to="/resume" class="route"  :class="{ current: isResume }" @click="activate">Resumes</router-link> 
+        <router-link to="/my-work" class="route" :class="{ current: isWork }">My work</router-link>
+        <router-link to="/experience" class="route" :class="{ current: isExperience }">Experience</router-link>
+        <router-link to="/blogs" class="route" :class="{ current: isBlogs }">Blog</router-link>
+        <router-link to="/plans" class="route" :class="{ current: isPlan }">What's next</router-link>
+        <router-link to="/inspirations" class="route" :class="{ current: isInspire }">What's the kick</router-link>
      </nav>
      <div class="view">
         <router-view></router-view>
@@ -30,6 +30,30 @@
   </div>
  
 </template>
+
+<script>
+export default {
+  data: function () {
+    return {
+      isHome: false,
+      isResume: false,
+      isWork: false,
+      isExperience: false,
+      isBlogs: false,
+      isPlan: false,
+      isInspire: false,
+  }},
+  methods: { 
+  activate() {
+    this.isHome = false;
+    this.isResume = false;
+    this.isWork = false;
+    this.isExperience = false;
+    this.isBlogs = false;
+    this.isPlan = false;
+    this.isInspire = false;
+  }}}
+</script>
 
 <style>
 
@@ -54,7 +78,7 @@ body{
 .top-bar{
   /* height: 15vh; */
   display: flex;
-  border: 1px solid rgb(192, 188, 188);
+  /* border: 1px solid rgb(192, 188, 188); */
   border-radius: 10px;
   padding: 20px 10px 20px 10px;
   margin: 5px;
@@ -99,14 +123,16 @@ body{
   /* margin-top: 60px; */
   text-decoration: none;
   font-size: 24px;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
   color: black;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
 }
 
-/* .current{
-  border-right: 7px solid rgb(0, 0, 0);
-  border-radius: 3px;
-} */
+.current{
+    box-shadow: 1px 3px 11px 2px rgba(0, 0, 0, 0.1);
+}
 
 .route:visited {
   text-decoration: none;
@@ -115,6 +141,7 @@ body{
 
 .route:hover {
   color: rgb(82, 82, 82);
+  background-color: rgba(187, 187, 187, 0.459);
 }
 
 /* .main-content{
