@@ -1,6 +1,4 @@
 <script>
-
-
 export default {
   props: ['title', 'file'],
   data: function () {

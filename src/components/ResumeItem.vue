@@ -19,7 +19,7 @@ div{
   display: grid;
   grid-template-rows: 1fr 3fr 1fr;
   width: 300px;
-  height: 300px;
+  height: 250px;
   padding: 10px;
   margin-bottom: 20px;
   text-align: left;
@@ -38,6 +38,7 @@ section{
   align-items: center;
   justify-content: center;
 }
+
 button{
   padding: 10px;
   border: 1px solid rgb(211, 211, 211);
